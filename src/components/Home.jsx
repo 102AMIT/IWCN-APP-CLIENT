@@ -19,7 +19,7 @@ const Home = () => {
   // initial render
   useEffect(() => {
     fetchApi();
-  }, [])
+  })
 
 
   // adding item 
@@ -34,14 +34,14 @@ const Home = () => {
     const postdata = await axios.post('http://localhost:8000/api/post',{description:description,title:title})
     
     const addedData = [...data, postdata.data];
-    setData(addedData); 
     toast.success("Post added successfully");
+    setData(addedData); 
+    
     console.log("hello");
   }
  
   useEffect(()=>{
-
-  });
+  },);
   
   
  
